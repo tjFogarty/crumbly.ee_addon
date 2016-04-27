@@ -584,7 +584,7 @@ class Crumbly_model extends CI_Model {
     $separator = $this->EE->config->item('word_separator') == 'underscore'
       ? '_' : '-';
 
-    return ucwords(str_replace($separator, ' ', urldecode($machine)));
+    return ucwords(str_replace($separator, ' ', strip_tags(urldecode($machine))));
   }
 
 
